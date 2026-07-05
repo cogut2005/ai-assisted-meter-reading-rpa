@@ -1,0 +1,889 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Studio.Forms.Runtime</x:String>
+      <x:String>UiPath.Forms.Activities</x:String>
+      <x:String>UiPath.Platform.GlobalVariables</x:String>
+      <x:String>UiPath.Forms.Activities.Base</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Forms.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Forms.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="2237,12550" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="njl:JObject" Name="mailPayload" />
+      <Variable x:TypeArguments="njl:JObject" Name="reviewInsertPayload" />
+      <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;)), &quot;data&quot;, &quot;input&quot;)]" Name="inputFolderPath" />
+      <Variable x:TypeArguments="s:String[]" Name="inputFiles" />
+      <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;)), &quot;data&quot;, &quot;output&quot;, &quot;human_review_queue.txt&quot;)]" Name="humanReviewPath" />
+      <Variable x:TypeArguments="x:String" Name="insertPsScript" />
+      <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;)), &quot;data&quot;, &quot;output&quot;, submissionId + &quot;_insert_result.json&quot;)]" Name="insertResultPath" />
+      <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;)), &quot;scripts&quot;, &quot;insert_from_validation_cli.py&quot;)]" Name="insertCliPath" />
+      <Variable x:TypeArguments="x:String" Name="pythonExePath" />
+      <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;)), &quot;scripts&quot;, &quot;validate_submission_cli.py&quot;)]" Name="cliScriptPath" />
+      <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;)), &quot;scripts&quot;, &quot;uipath_bridge.py&quot;)]" Name="bridgePath" />
+      <Variable x:TypeArguments="x:String" Name="submissionId" />
+      <Variable x:TypeArguments="x:String" Name="notes" />
+      <Variable x:TypeArguments="x:String" Name="imageFile" />
+      <Variable x:TypeArguments="x:String" Name="source" />
+      <Variable x:TypeArguments="x:String" Name="readingValue" />
+      <Variable x:TypeArguments="x:String" Name="readingDate" />
+      <Variable x:TypeArguments="x:String" Name="meterNumber" />
+      <Variable x:TypeArguments="x:String" Name="customerId" />
+      <Variable x:TypeArguments="x:String" Name="firstDataRow" />
+      <Variable x:TypeArguments="x:String" Name="header" />
+      <Variable x:TypeArguments="s:String[]" Name="lines" />
+      <Variable x:TypeArguments="x:String" Name="csvText" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtInput" />
+      <Variable x:TypeArguments="x:String" Default="[CStr(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;, &quot;data&quot;, &quot;history&quot;, &quot;master.db&quot;)))]" Name="dbPath" />
+      <Variable x:TypeArguments="x:String" Default="[CStr(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;, &quot;data&quot;, &quot;output&quot;, &quot;validation_result.json&quot;)))]" Name="validationPath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="622,175" sap2010:WorkflowViewState.IdRef="Assign_27">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[pythonExePath]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["C:\Users\cinar\AppData\Local\Programs\Python\Python313\python.exe"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="622,175" sap2010:WorkflowViewState.IdRef="Assign_30">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[inputFiles]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[System.IO.Directory.GetFiles(inputFolderPath, "*.csv").OrderBy(Function(p) p).ToArray()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="622,12177" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[inputFiles]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="620,12055" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="njl:JObject" Name="emailPayload" />
+              <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;)), &quot;scripts&quot;, &quot;generate_ai_mail_draft_cli.py&quot;)]" Name="mailScriptPath" />
+              <Variable x:TypeArguments="x:String" Name="mailOutputPath" />
+              <Variable x:TypeArguments="x:String" Name="mailPsScript" />
+              <Variable x:TypeArguments="x:String" Name="mailJson" />
+              <Variable x:TypeArguments="x:String" Name="recipientEmail" />
+              <Variable x:TypeArguments="x:String" Default="[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, &quot;..&quot;)), &quot;scripts&quot;, &quot;lookup_customer_email_cli.py&quot;)]" Name="emailLookupScriptPath" />
+              <Variable x:TypeArguments="x:String" Name="customerEmailPath" />
+              <Variable x:TypeArguments="x:String" Name="customerEmailPsScript" />
+              <Variable x:TypeArguments="x:String" Name="customerEmailJson" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadTextFile File="{x:Null}" Content="[csvText]" DisplayName="Read Text File" FileName="[currentText]" sap:VirtualizedContainerService.HintSize="586,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_4" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="586,123" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[currentText]" />
+            <Assign sap:VirtualizedContainerService.HintSize="586,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[lines]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[csvText.Split(New String(){vbCrLf, vbLf, vbCr}, StringSplitOptions.RemoveEmptyEntries)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="586,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[header]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[If(lines.Length &gt; 0, lines(0), "")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="586,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[firstDataRow]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[If(lines.Length &gt; 1, lines(1), "")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="586,11108" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[lines]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="584,10977" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="finalReadingValue" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[currentText &lt;&gt; header]" sap:VirtualizedContainerService.HintSize="550,10917" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="548,10697" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="mailBody" />
+                            <Variable x:TypeArguments="x:String" Name="mailSubject" />
+                            <Variable x:TypeArguments="x:String" Name="imageArg" />
+                            <Variable x:TypeArguments="x:String" Name="decision" />
+                            <Variable x:TypeArguments="x:String" Name="validationJson" />
+                            <Variable x:TypeArguments="njl:JObject" Name="validationPayload" />
+                            <Variable x:TypeArguments="x:String" Name="meterUnit" />
+                            <Variable x:TypeArguments="x:String" Name="psScript" />
+                            <Variable x:TypeArguments="s:String[]" Name="columns" />
+                            <Variable x:TypeArguments="x:String" Name="readingValueArg" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_13">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="s:String[]">[columns]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="s:String[]">[(currentText &amp; ",,,,,,").Split(","c)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[customerId]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[columns(0).Trim]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_7">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[meterNumber]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[columns(1).Trim]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[readingDate]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[columns(2).Trim]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[readingValue]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[columns(3).Trim]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_10">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[source]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[columns(4).Trim]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_11">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[imageFile]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[columns(5).Trim]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_12">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[notes]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[columns(6).Trim.Trim(""""c)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_14">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[submissionId]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["SUB-" &amp; DateTime.Now.ToString("yyyyMMddHHmmssfff") &amp; "-" &amp; Guid.NewGuid().ToString("N").Substring(0, 8)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_29">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[imageArg]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(imageFile), "", " --image-file """ &amp; imageFile &amp; """")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_31">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[readingValueArg]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[If(String.IsNullOrWhiteSpace(readingValue), "", " --reading-value """ &amp; readingValue &amp; """")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_28">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[psScript]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Join(Environment.NewLine, {
+"&amp; """ &amp; pythonExePath &amp; """ """ &amp; cliScriptPath &amp; """ --db-path """ &amp; dbPath &amp; """ --submission-id """ &amp; submissionId &amp; """ --customer-id """ &amp; customerId &amp; """ --meter-number """ &amp; meterNumber &amp; """ --reading-date """ &amp; readingDate &amp; """" &amp; readingValueArg &amp; " --source """ &amp; source &amp; """" &amp; imageArg &amp; " --notes """ &amp; notes.Replace("""", "'") &amp; """ --output-json """ &amp; validationPath &amp; """ | Out-Null"
+})]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="[psScript]" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="514,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_1" IsScript="True" PowerShellProcess="PowerShellCore">
+                            <ui:InvokePowerShell.Parameters>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                            </ui:InvokePowerShell.Parameters>
+                            <ui:InvokePowerShell.PowerShellVariables>
+                              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                            </ui:InvokePowerShell.PowerShellVariables>
+                          </ui:InvokePowerShell>
+                          <ui:ReadTextFile File="{x:Null}" Content="[validationJson]" DisplayName="Read Text File" FileName="[validationPath]" sap:VirtualizedContainerService.HintSize="514,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_70">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="njl:JObject">[validationPayload]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="njl:JObject">[Newtonsoft.Json.Linq.JObject.Parse(validationJson)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_71">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[meterUnit]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[If(validationPayload("unit") Is Nothing OrElse String.IsNullOrWhiteSpace(validationPayload("unit").ToString), "", validationPayload("unit").ToString)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_25">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[decision]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(validationJson.Contains("""decision"": ""processed"""), "processed",
+If(validationJson.Contains("""decision"": ""human_review"""), "human_review",
+If(validationJson.Contains("""decision"": ""exception"""), "exception",
+If(validationJson.Contains("""decision"": ""new_customer"""), "new_customer", "unknown"))))]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[decision]" sap:VirtualizedContainerService.HintSize="514,5509" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                            <Switch.Default>
+                              <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="512,231" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="478,123" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Default: [&quot; + decision + &quot;]&quot;]" />
+                                <ui:Continue sap:VirtualizedContainerService.HintSize="478,48" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                              </Sequence>
+                            </Switch.Default>
+                            <Sequence x:Key="processed" DisplayName="Case" sap:VirtualizedContainerService.HintSize="512,760" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="insertJson" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_26">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[insertPsScript]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">["&amp; """ &amp; pythonExePath &amp; """ """ &amp; insertCliPath &amp; """ --db-path """ &amp; dbPath &amp; """ --validation-json """ &amp; validationPath &amp; """ --source """ &amp; source &amp; """ --output-json """ &amp; insertResultPath &amp; """ | Out-Null"]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:InvokePowerShell x:TypeArguments="x:String" ContinueOnError="{x:Null}" CommandText="[insertPsScript]" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="478,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_3" IsScript="True" PowerShellProcess="PowerShellCore">
+                                <ui:InvokePowerShell.Parameters>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                                </ui:InvokePowerShell.Parameters>
+                                <ui:InvokePowerShell.PowerShellVariables>
+                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                </ui:InvokePowerShell.PowerShellVariables>
+                              </ui:InvokePowerShell>
+                              <ui:ReadTextFile File="{x:Null}" Content="[insertJson]" DisplayName="Read Text File" FileName="[insertResultPath]" sap:VirtualizedContainerService.HintSize="478,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_3" />
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="478,123" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[insertJson]" />
+                              <Assign sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="Assign_54">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[finalReadingValue]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[readingValue]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                            <Sequence x:Key="human_review" DisplayName="Case" sap:VirtualizedContainerService.HintSize="512,4090" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="imageSrc" />
+                                <Variable x:TypeArguments="x:String" Name="previewImagePsScript" />
+                                <Variable x:TypeArguments="x:String" Name="previewImagePath" />
+                                <Variable x:TypeArguments="x:String" Name="reviewDecision" />
+                                <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="reviewFormData" />
+                                <Variable x:TypeArguments="x:String" Name="imageDataUrl" />
+                                <Variable x:TypeArguments="x:String" Name="imageMime" />
+                                <Variable x:TypeArguments="x:String" Default="Get-Process mspaint -ErrorAction SilentlyContinue | Stop-Process -Force" Name="closeImageScript" />
+                                <Variable x:TypeArguments="x:String" Name="reviewInsertJson" />
+                                <Variable x:TypeArguments="x:String" Name="reviewInsertPsScript" />
+                                <Variable x:TypeArguments="x:String" Name="reviewInsertPath" />
+                                <Variable x:TypeArguments="x:String" Name="reviewInsertScriptPath" />
+                                <Variable x:TypeArguments="x:String" Name="absoluteImagePath" />
+                                <Variable x:TypeArguments="x:String" Name="openImagePsScript" />
+                                <Variable x:TypeArguments="x:String" Name="approvedReadingValue" />
+                                <Variable x:TypeArguments="x:String" Name="aiConfidence" />
+                                <Variable x:TypeArguments="x:String" Name="aiReadingValue" />
+                                <Variable x:TypeArguments="njl:JObject" Name="aiPayload" />
+                                <Variable x:TypeArguments="x:String" Name="aiJson" />
+                                <Variable x:TypeArguments="x:String" Name="aiPsScript" />
+                                <Variable x:TypeArguments="x:String" Name="aiOutputPath" />
+                                <Variable x:TypeArguments="x:String" Name="imageFullPath" />
+                                <Variable x:TypeArguments="x:String" Name="aiScriptPath" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[aiScriptPath]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, "..")), "scripts", "extract_meter_image_cli.py")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[imageFullPath]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[If(System.IO.Path.IsPathRooted(imageFile), imageFile, System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, "..")), imageFile))]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[aiOutputPath]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, "..")), "data", "output", submissionId + "_ai_extraction.json")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[aiPsScript]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Join(Environment.NewLine, {
+"&amp; """ &amp; pythonExePath &amp; """ """ &amp; aiScriptPath &amp; """ --image-path """ &amp; imageFullPath &amp; """ --output-json """ &amp; aiOutputPath &amp; """ | Out-Null"
+})]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="[aiPsScript]" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="478,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_4" IsScript="True" PowerShellProcess="PowerShellCore">
+                                <ui:InvokePowerShell.Parameters>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                                </ui:InvokePowerShell.Parameters>
+                                <ui:InvokePowerShell.PowerShellVariables>
+                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                </ui:InvokePowerShell.PowerShellVariables>
+                              </ui:InvokePowerShell>
+                              <ui:ReadTextFile File="{x:Null}" Content="[aiJson]" DisplayName="Read Text File" FileName="[aiOutputPath]" sap:VirtualizedContainerService.HintSize="478,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_5" />
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_44">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="njl:JObject">[aiPayload]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="njl:JObject">[Newtonsoft.Json.Linq.JObject.Parse(aiJson)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_45">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[aiReadingValue]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[aiPayload("reading_value").ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_46">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[aiConfidence]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[aiPayload("confidence_score").ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_47">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[absoluteImagePath]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.IO.Path.Combine(
+    System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, "..")),
+    "data",
+    "input",
+    "images",
+    System.IO.Path.GetFileName(imageFile)
+)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_60">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[imageSrc]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">["data:image/png;base64," &amp; Convert.ToBase64String(System.IO.File.ReadAllBytes(absoluteImagePath))]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478,149" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                <ui:MultipleAssign.AssignOperations>
+                                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                      <ui:AssignOperation.To>
+                                        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[reviewFormData]</OutArgument>
+                                      </ui:AssignOperation.To>
+                                      <ui:AssignOperation.Value>
+                                        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New System.Collections.Generic.Dictionary(Of String, Object)]</InArgument>
+                                      </ui:AssignOperation.Value>
+                                    </ui:AssignOperation>
+                                  </scg:List>
+                                </ui:MultipleAssign.AssignOperations>
+                              </ui:MultipleAssign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_59">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[approvedReadingValue]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[aiReadingValue]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ufa:ShowFormActivity Height="{x:Null}" InstanceName="{x:Null}" Left="{x:Null}" ShowInTaskbar="{x:Null}" ShowMargin="{x:Null}" Title="{x:Null}" Top="{x:Null}" TopMost="{x:Null}" Width="{x:Null}" WindowState="{x:Null}" DisplayName="Show Form" FormId="5bf892d4-0354-4e30-9421-604e1ce9250c" sap:VirtualizedContainerService.HintSize="478,221" sap2010:WorkflowViewState.IdRef="ShowFormActivity_2" IsAsync="False">
+                                <ufa:ShowFormActivity.Arguments>
+                                  <InArgument x:TypeArguments="x:String" x:Key="meterNumber">[meterNumber]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="date">[readingDate]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="aiReading">[aiReadingValue]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="aiConfidence">[aiConfidence]</InArgument>
+                                  <InOutArgument x:TypeArguments="x:String" x:Key="approvedReading">[approvedReadingValue]</InOutArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="image">[imageSrc]</InArgument>
+                                </ufa:ShowFormActivity.Arguments>
+                              </ufa:ShowFormActivity>
+                              <ui:InvokePowerShell x:TypeArguments="sma:PSObject" ContinueOnError="{x:Null}" CommandText="[closeImageScript]" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="478,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_14" IsScript="True" PowerShellProcess="PowerShellCore">
+                                <ui:InvokePowerShell.Parameters>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                                </ui:InvokePowerShell.Parameters>
+                                <ui:InvokePowerShell.PowerShellVariables>
+                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                </ui:InvokePowerShell.PowerShellVariables>
+                              </ui:InvokePowerShell>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_49">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[reviewInsertScriptPath]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, "..")), "scripts", "insert_reviewed_reading_cli.py")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_50">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[reviewInsertPath]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, "..")), "data", "output", submissionId + "_review_insert.json")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_51">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[reviewInsertPsScript]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Join(Environment.NewLine, {
+"$pythonExe = '" &amp; pythonExePath &amp; "'",
+"$scriptPath = '" &amp; reviewInsertScriptPath &amp; "'",
+"$dbPath = '" &amp; dbPath &amp; "'",
+"$validationJson = '" &amp; validationPath &amp; "'",
+"$outputJson = '" &amp; reviewInsertPath &amp; "'",
+"&amp; $pythonExe $scriptPath --db-path $dbPath --validation-json $validationJson --approved-reading-value '" &amp; approvedReadingValue &amp; "' --source '" &amp; source &amp; "' --notes '" &amp; notes.Replace("'", "''") &amp; " Human approved review.' --output-json $outputJson | Out-Null"
+})]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:InvokePowerShell x:TypeArguments="x:String" ContinueOnError="{x:Null}" CommandText="[reviewInsertPsScript]" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="478,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_13" IsScript="True" PowerShellProcess="PowerShellCore">
+                                <ui:InvokePowerShell.Parameters>
+                                  <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                                </ui:InvokePowerShell.Parameters>
+                                <ui:InvokePowerShell.PowerShellVariables>
+                                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                                </ui:InvokePowerShell.PowerShellVariables>
+                              </ui:InvokePowerShell>
+                              <ui:ReadTextFile File="{x:Null}" Content="[reviewInsertJson]" DisplayName="Read Text File" FileName="[reviewInsertPath]" sap:VirtualizedContainerService.HintSize="478,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_9" />
+                              <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_52">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="njl:JObject">[reviewInsertPayload]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="njl:JObject">[Newtonsoft.Json.Linq.JObject.Parse(reviewInsertJson)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <If Condition="[Not CBool(reviewInsertPayload(&quot;inserted&quot;))]" sap:VirtualizedContainerService.HintSize="478,460" sap2010:WorkflowViewState.IdRef="If_2">
+                                <If.Then>
+                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,231" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[&quot;Human review value rejected:&quot; &amp; Environment.NewLine &amp;&#xA;reviewInsertPayload(&quot;reason&quot;).ToString]" />
+                                    <ui:Continue sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <Assign sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="Assign_53">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[finalReadingValue]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[approvedReadingValue]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                            <Sequence x:Key="exception" DisplayName="Case" sap:VirtualizedContainerService.HintSize="512,231" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="478,123" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[If(validationPayload(&quot;reason&quot;) Is Nothing OrElse String.IsNullOrWhiteSpace(validationPayload(&quot;reason&quot;).ToString), &quot;Submission &quot; &amp; submissionId &amp; &quot; could not be processed. No specific reason was returned.&quot;, &quot;Submission &quot; &amp; submissionId &amp; &quot; could not be processed.&quot; &amp; Environment.NewLine &amp; &quot;Reason: &quot; &amp; validationPayload(&quot;reason&quot;).ToString)]" />
+                              <ui:Continue sap:VirtualizedContainerService.HintSize="478,48" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                            </Sequence>
+                          </Switch>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_39">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[customerEmailPath]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, "..")), "data", "output", submissionId + "_customer_email.json")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_40">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[customerEmailPsScript]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Join(Environment.NewLine, {
+"$pythonExe = '" &amp; pythonExePath &amp; "'",
+"$scriptPath = '" &amp; emailLookupScriptPath &amp; "'",
+"$dbPath = '" &amp; dbPath &amp; "'",
+"$outputJson = '" &amp; customerEmailPath &amp; "'",
+"&amp; $pythonExe $scriptPath --db-path $dbPath --customer-id '" &amp; customerId &amp; "' --output-json $outputJson"
+})]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InvokePowerShell x:TypeArguments="x:String" ContinueOnError="{x:Null}" CommandText="[customerEmailPsScript]" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="514,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_8" IsScript="True" PowerShellProcess="PowerShellCore">
+                            <ui:InvokePowerShell.Parameters>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                            </ui:InvokePowerShell.Parameters>
+                            <ui:InvokePowerShell.PowerShellVariables>
+                              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                            </ui:InvokePowerShell.PowerShellVariables>
+                          </ui:InvokePowerShell>
+                          <ui:ReadTextFile File="{x:Null}" Content="[customerEmailJson]" DisplayName="Read Text File" FileName="[customerEmailPath]" sap:VirtualizedContainerService.HintSize="514,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_7" />
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_41">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="njl:JObject">[emailPayload]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="njl:JObject">[Newtonsoft.Json.Linq.JObject.Parse(customerEmailJson)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_42">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[recipientEmail]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[emailPayload("email").ToString]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_55">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[mailOutputPath]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[System.IO.Path.Combine(System.IO.Path.GetFullPath(System.IO.Path.Combine(Environment.CurrentDirectory, "..")), "data", "output", submissionId + "_mail_draft.json")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Assign_43">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[mailPsScript]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[String.Join(Environment.NewLine, {
+"$pythonExe = '" &amp; pythonExePath &amp; "'",
+"$scriptPath = '" &amp; mailScriptPath &amp; "'",
+"$outputJson = '" &amp; mailOutputPath &amp; "'",
+"$submissionId = '" &amp; submissionId &amp; "'",
+"$recipient = '" &amp; recipientEmail &amp; "'",
+"$readingValue = '" &amp; finalReadingValue &amp; "'",
+"$unit = '" &amp; meterUnit &amp; "'",
+"if ([string]::IsNullOrWhiteSpace($submissionId)) { throw 'submissionId is empty before mail draft' }",
+"if ([string]::IsNullOrWhiteSpace($recipient)) { throw 'recipientEmail is empty before mail draft' }",
+"if ([string]::IsNullOrWhiteSpace($readingValue)) { throw 'finalReadingValue is empty before mail draft' }",
+"&amp; $pythonExe $scriptPath --submission-id $submissionId --recipient $recipient --customer-name 'Customer' --meter-number '" &amp; meterNumber &amp; "' --reading-date '" &amp; readingDate &amp; "' --reading-value $readingValue --unit $unit --output-json $outputJson | Out-Null"
+})]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InvokePowerShell x:TypeArguments="x:String" ContinueOnError="{x:Null}" CommandText="[mailPsScript]" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="514,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_9" IsScript="True" PowerShellProcess="PowerShellCore">
+                            <ui:InvokePowerShell.Parameters>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                            </ui:InvokePowerShell.Parameters>
+                            <ui:InvokePowerShell.PowerShellVariables>
+                              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                            </ui:InvokePowerShell.PowerShellVariables>
+                          </ui:InvokePowerShell>
+                          <ui:ReadTextFile File="{x:Null}" Content="[mailJson]" DisplayName="Read Text File" FileName="[mailOutputPath]" sap:VirtualizedContainerService.HintSize="514,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_8" />
+                          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="514,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                            <ui:MultipleAssign.AssignOperations>
+                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="njl:JObject">[mailPayload]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="njl:JObject">[Newtonsoft.Json.Linq.JObject.Parse(mailJson)]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[mailSubject]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[mailPayload("subject").ToString]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="x:String">[mailBody]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="x:String">[mailPayload("body").ToString]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                              </scg:List>
+                            </ui:MultipleAssign.AssignOperations>
+                          </ui:MultipleAssign>
+                          <ufa:ShowFormActivity Height="{x:Null}" InstanceName="{x:Null}" Left="{x:Null}" ShowInTaskbar="{x:Null}" ShowMargin="{x:Null}" Title="{x:Null}" Top="{x:Null}" TopMost="{x:Null}" Width="{x:Null}" WindowState="{x:Null}" DisplayName="Show Form" FormId="fdffe5ee-d05b-4ff2-9388-7f1e6bbb2d26" sap:VirtualizedContainerService.HintSize="514,221" sap2010:WorkflowViewState.IdRef="ShowFormActivity_3" IsAsync="False">
+                            <ufa:ShowFormActivity.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="meterId">[meterNumber]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="readingValue">[finalReadingValue]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="email">[recipientEmail]</InArgument>
+                              <InOutArgument x:TypeArguments="x:String" x:Key="subject">[mailSubject]</InOutArgument>
+                              <InOutArgument x:TypeArguments="x:String" x:Key="body">[mailBody]</InOutArgument>
+                            </ufa:ShowFormActivity.Arguments>
+                          </ufa:ShowFormActivity>
+                          <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="your-email@gmail.com" DisplayName="Use Gmail" EmailAddress="your-email@gmail.com" sap:VirtualizedContainerService.HintSize="514,663" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_1" Timeout="90" UseConnectionService="False">
+                            <umab:GmailApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,455" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[mailBody]" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,395" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[mailSubject]" To="[recipientEmail]" UseDocumentAsBody="False">
+                                    <umab:SendMailX.Files>
+                                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                    </umab:SendMailX.Files>
+                                    <umab:SendMailX.HtmlBodyFromFile>
+                                      <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
+                                        <umabh:HtmlContentArgument.RuntimeImages>
+                                          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                        </umabh:HtmlContentArgument.RuntimeImages>
+                                        <umabh:HtmlContentArgument.ValueMappings>
+                                          <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                        </umabh:HtmlContentArgument.ValueMappings>
+                                      </umabh:HtmlContentArgument>
+                                    </umab:SendMailX.HtmlBodyFromFile>
+                                  </umab:SendMailX>
+                                </Sequence>
+                              </ActivityAction>
+                            </umab:GmailApplicationCard.Body>
+                            <umab:GmailApplicationCard.ClientId>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </umab:GmailApplicationCard.ClientId>
+                            <umab:GmailApplicationCard.ClientSecret>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </umab:GmailApplicationCard.ClientSecret>
+                          </umab:GmailApplicationCard>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="548,90" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="586,115" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[currentText]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

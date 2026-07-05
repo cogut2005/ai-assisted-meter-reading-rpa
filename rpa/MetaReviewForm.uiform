@@ -1,0 +1,80 @@
+﻿{
+  "Metadata": {
+    "Id": "5bf892d4-0354-4e30-9421-604e1ce9250c",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "MetaReviewForm",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "image",
+        "key": "image",
+        "type": "hidden",
+        "input": true,
+        "tableView": false
+      },
+      {
+        "label": "Image",
+        "html": "<img src=\"{{data.image}}\" style=\"max-width:100%; height:auto;\" />",
+        "refreshOnChange": true,
+        "key": "imageContent",
+        "type": "content",
+        "input": false,
+        "tableView": false
+      },
+      {
+        "label": "Meter Number",
+        "disabled": true,
+        "tableView": true,
+        "key": "meterNumber",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Date",
+        "disabled": true,
+        "tableView": true,
+        "key": "date",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "AI Reading",
+        "disabled": true,
+        "tableView": true,
+        "key": "aiReading",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Ai Confidence",
+        "disabled": true,
+        "tableView": true,
+        "key": "aiConfidence",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Approved Reading",
+        "tableView": true,
+        "key": "approvedReading",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}

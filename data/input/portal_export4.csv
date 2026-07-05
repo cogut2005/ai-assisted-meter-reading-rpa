@@ -1,0 +1,2 @@
+customer_id,meter_number,reading_date,reading_value,source,image,notes
+1,MTR-0003,2026-07-04,,portal,data/input/images/reading2.png,Photo-based meter image for GPT-assisted human review.

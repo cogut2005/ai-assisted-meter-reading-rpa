@@ -1,0 +1,2 @@
+customer_id,meter_number,reading_date,reading_value,source,image,notes
+1,MTR-0001,2026-07-01,15652,portal,,New weekly portal submission for customer 1.

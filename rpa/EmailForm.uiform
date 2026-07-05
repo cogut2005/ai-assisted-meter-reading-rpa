@@ -1,0 +1,64 @@
+﻿{
+  "Metadata": {
+    "Id": "fdffe5ee-d05b-4ff2-9388-7f1e6bbb2d26",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "EmailForm",
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "label": "Meter Id",
+        "disabled": true,
+        "tableView": true,
+        "key": "meterId",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Reading Value",
+        "disabled": true,
+        "tableView": true,
+        "key": "readingValue",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Customer Email",
+        "disabled": true,
+        "tableView": true,
+        "key": "email",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Mail Subject",
+        "tableView": true,
+        "key": "subject",
+        "type": "textfield",
+        "input": true
+      },
+      {
+        "label": "Mail Body",
+        "tableView": true,
+        "key": "body",
+        "type": "textarea",
+        "rows": 10,
+        "input": true
+      },
+      {
+        "type": "button",
+        "label": "Submit",
+        "key": "submit",
+        "disableOnInvalid": true,
+        "input": true,
+        "tableView": false
+      }
+    ]
+  }
+}

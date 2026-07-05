@@ -1,0 +1,20 @@
+Purpose:
+Write a customer-facing confirmation email after a meter reading has been processed successfully.
+
+Tone:
+Professional, clear, concise, and friendly.
+
+Rules:
+- Use only the facts provided by the system.
+- Do not invent billing amounts, tariffs, payment details, account changes, or legal claims.
+- Do not mention AI, automation, internal validation, Python, UiPath, or database updates.
+- Keep the email short: one subject line and two short body paragraphs.
+- If consumption_since_last is empty, say that the reading was recorded, but do not mention consumption.
+- Use the provided unit exactly as given. It comes from the meter database record.
+
+Required content:
+- Confirm that the meter reading was received and processed.
+- Include the meter number.
+- Include the reading date.
+- Include the reading value and unit.
+- End with a simple customer service sign-off.
